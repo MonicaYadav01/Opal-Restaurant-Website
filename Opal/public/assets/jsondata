@@ -1,0 +1,108 @@
+
+{
+    "name": "Veg Bibimbap",
+    "id": "1",
+    "price": "₹300",
+    "qty": "Available",
+    "img": "https://img.hellofresh.com/f_auto,fl_lossy,h_640,q_auto,w_1200/hellofresh_s3/image/vegetarian-bibimbap-e7dc3879.jpg"
+}
+
+
+{
+    "name": "Non-veg Bibimbap",
+    "id": "2",
+    "price": "₹450",
+    "qty": "Available",
+    "img": "https://rangitikeichicken.co.nz/wp-content/uploads/fly-images/567/KoreanChickenBibimbap-800x800.jpg"
+}  
+{
+    "name": "Veg kimbap",
+    "id": "3",
+    "price": "₹400",
+    "qty": "Available",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYPY6wsAC97FgIkD2Ys2JCdABfUa2E7MhH5A&usqp=CAU"
+}
+{
+    "name": "Nonveg kimbap",
+    "id": "4",
+    "price": "₹500",
+    "qty": "Available",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdmt1S6w3qfR9j9RM34lG_zARRsJv2sHCcXg&usqp=CAU"
+}
+{
+    "name": "Tteokbokki",
+    "id": "5",
+    "price": "₹350",
+    "qty": "Available",
+    "img": "https://chefatulya.com/wp-content/uploads/2021/07/tteokbokki_1-copy.jpg"
+}
+{
+    "name": "Mushroom Bulgogi",
+    "id": "6",
+    "price": "₹450",
+    "qty": "Available",
+    "img": "https://healthmylifestyle.com/wp-content/uploads/2023/11/vegan-bulgogi.jpg"
+}
+{
+    "name": "Chicken Bulgogi",
+    "id": "7",
+    "price": "₹550",
+    "qty": "Available",
+    "img": "https://universityfood.com.au/wp-content/uploads/2022/05/Chicken-Bulgogi-500x500-v2.png"
+}
+{
+    "name": "Veg Korean stew",
+    "id": "8",
+    "price": "₹550",
+    "qty": "Available",
+    "img": "https://gastroplant.com/wp-content/uploads/2019/11/1910_Vegan-Kimchi-Jjigae_003.jpg"
+}
+{
+    "name": "Chicken Korean stew",
+    "id": "9",
+    "price": "₹650",
+    "qty": "Available",
+    "img": "https://www.spoonforkbacon.com/wp-content/uploads/2023/02/Korean-army-stew.jpg"
+}
+{
+    "name": "Blackbean noodles",
+    "id": "10",
+    "price": "₹600",
+    "qty": "Available",
+    "img": "https://www.myplantifulcooking.com/wp-content/uploads/2022/12/vegan-jajangmyeon-featured.jpg"
+}
+{
+    "name": "Chicken Blackbean noodles",
+    "id": "11",
+    "price": "₹400",
+    "qty": "Available",
+    "img": "https://mediavine-res.cloudinary.com/image/upload/s--hph-p6-u--/c_limit,f_auto,fl_lossy,h_1080,q_auto,w_1920/v1658189950/ejtd4xfnsmcxfn6lziuj.jpg"
+}
+{
+    "name": "Chicken Hotpot",
+    "id": "12",
+    "price": "₹750",
+    "qty": "Available",
+    "img": "https://img.jamieoliver.com/jamieoliver/recipe-database/0lV6F1Vf4uf8jKpl95fNav.jpg?tr=w-800,h-1066"
+}
+{
+    "name": "Veg Hotpot",
+    "id": "13",
+    "price": "₹650",
+    "qty": "Available",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnqLd2jnMcdo5iqtXM_lyy0BR8KWtsJBtA0e1N_Y7kHQ&s"
+}
+{
+    "name": "Korean Fried Chicken",
+    "id": "14",
+    "price": "₹550",
+    "qty": "Available",
+    "img": "https://www.kitchensanctuary.com/wp-content/uploads/2019/08/Korean-Fried-Chicken-square-FS-New-7377.jpg"
+}
+{
+    "name": "Mushroom Fried wings",
+    "id": "15",
+    "price": "₹600",
+    "qty": "Available",
+    "img": "https://veggieanh.com/wp-content/uploads/2022/03/Korean-Fried-Mushroom.jpg"
+}

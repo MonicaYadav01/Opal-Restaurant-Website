@@ -1,0 +1,31 @@
+.parent-container{
+
+    display: flex;
+    gap: 2rem;
+}
+.container{
+
+    display: flex;
+    gap: 2rem;  
+
+}
+
+
+
+.container-img img {
+
+    width: 8rem;
+    height: 8rem;
+
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+
+}
+
+.container-content{
+
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
