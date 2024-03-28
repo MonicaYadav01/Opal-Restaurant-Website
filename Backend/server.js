@@ -8,13 +8,18 @@ import { productRoute } from './routes/productRoute.js';
 import { userRoute } from './routes/userRoute.js';
 import { cartRoute } from './routes/cartRoute.js';
 
-const server = express();  //main 
-
 config({path:"./config.env"});
 
-server.use(express.json());
+const server = express();  
 
 server.use(cors());
+server.use(express.json());
+
+
+
+
+
+
 
 
 class  App{
