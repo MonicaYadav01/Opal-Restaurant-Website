@@ -11,7 +11,7 @@ const Footer = () => {
   return (
      <footer className='footer'>
       <div className='logoicon'>
-        <img src='./assets/logo.png' alt='logoimg' />
+        <img src='./assets/logo1.png' alt='logoimg' />
       </div>
       <div className='footer-nav'>
         <h2>QUICK LINKS</h2>

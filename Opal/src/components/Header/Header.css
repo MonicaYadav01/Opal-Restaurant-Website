@@ -8,7 +8,8 @@
 
 
 nav .logoicon img {
-    width: 80px;
+    width: 100%;
+    
 }
 
 .navbar a{
@@ -22,6 +23,7 @@ nav .logoicon img {
 .nav-bar1{
     display: flex;
     gap: 3rem;
+    font-size: larger;
 }
 
 
@@ -31,20 +33,12 @@ nav .logoicon img {
     align-items: center;
     gap: 3rem;
 }
-.nav-bar2 button{
-    width: 100px;
-    height: 30px;
-    outline: none;
-    border: 2px solid #7a7a7a;
-    border-radius: 75px;
-    color: #515151;
-    font-size: 20px;
-    font-weight: 500;
-    background: white;
+.nav-profile-icon{
+    cursor: pointer;
 }
-.nav-bar2 button:active{
-    background: #515252;
-}
+
+
+
 .nav-cart-count{
     width: 25px;
     height: 25px;

@@ -58,6 +58,11 @@ form{
     flex-direction: column;
     gap: 0.7rem;
 }
+.submit-container a{
+    color: var(--neutral);
+    text-decoration: none;
+    border: none;
+}
 
 
 .submit-btn{

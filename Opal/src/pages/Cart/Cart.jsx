@@ -2,23 +2,23 @@ import React, { useEffect, useState } from 'react'
 import { getcart, removefromcart } from '../../api/cartProducts';
 import DeleteIcon from '@mui/icons-material/Delete';
 import './Cart.css'
+import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
 
 
-  const {token} = JSON.parse(localStorage.getItem("user"));
+  const {token} = JSON.parse(localStorage.getItem("user")) || "";
 
   const [carts,setCarts] = useState([]);
 
+  const navigate  = useNavigate();
 
-
-  
 
   useEffect(()=>{
 
     const getCartData  =  async()=>{
 
-      const data  = await getcart(token);
+      const data  = await  getcart(token);
   
       if(data)
       {
@@ -29,7 +29,8 @@ const Cart = () => {
     }
 
 
-    getCartData();
+    token && getCartData();
+
   },[carts])
 
 
@@ -44,19 +45,18 @@ const Cart = () => {
      }
   }
 
+
+
   return (
     <div className='parent-container'>
-
     <div>
-      {carts.map((item)=>(<CartItem {...item} deletefromcart={()=> deletefromcart(item._id)} />))}
+      {carts.map((item)=>(<CartItem {...item} deletefromcart={()=> token ? deletefromcart(item._id) : navigate("/login") } />))}
     </div>
     <div>
       <OrderDetails carts={carts}/>
     </div>
-    
-
     </div>
-  )
+  );
 }
 
 export default Cart;
@@ -104,17 +104,18 @@ const OrderDetails = ({carts})=>{
         <div>
            {/* {carts.map((item)=> (<p>{item.name}*{item</p> ))} */}
         </div>
-        <div>
-          <div>
+        <div className='orderdetails-container'>
+          <div className='orderdetails-part1'>
             <p>SubTotal</p>
             <p>RS.{getTotal()}</p>
           </div>
-          <div>
+          <div className='orderdetails-part2'>
             <p>Delivery</p>
             <p>Free</p>
           </div>
           <button>Placed Order</button> 
         </div>
+        
       </div>
     )
 

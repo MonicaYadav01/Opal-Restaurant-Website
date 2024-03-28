@@ -9,7 +9,11 @@ import { useNavigate } from 'react-router-dom';
 const Menu = () => {
 
 
-  const {token} = JSON.parse(localStorage.getItem("user"));
+  const {token} = JSON.parse(localStorage.getItem("user")) || "";
+
+
+
+  const navigate = useNavigate();
 
   const[products, setProducts]= useState([]);
   const[carts,setCarts] = useState([]);
@@ -20,11 +24,12 @@ const Menu = () => {
 
   const getCartData  =  async()=>{
 
-    const data  = await getcart(token);
+    const data  = await getcart(token);  
 
     if(data)
     {
       setCarts(data.cartData);
+
     }
 
   }
@@ -57,7 +62,7 @@ const Menu = () => {
 
   useEffect(()=>{
 
-    getCartData();
+    token && getCartData();
 
   },[carts])
 
@@ -94,11 +99,14 @@ const Menu = () => {
 
 
 
+
+  
+
   
     return (
       <>
        <div className='product-container'> 
-        {products.length > 0 && products.map((item)=>(<Item {...item} addtocart={()=> addtocartProduct(item)} key={item._id} carts={carts}/> ))}
+        {products.length > 0 && products.map((item)=>(<Item {...item} addtocart={()=> token ? addtocartProduct(item) : navigate("/login")} key={item._id} carts={carts}/> ))}
         </div> 
       </>
     );

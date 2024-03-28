@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {NavLink, useNavigate} from 'react-router-dom';
 import { useState } from 'react';
 import './Header.css';
@@ -11,11 +11,35 @@ const Header = () => {
   const navigate = useNavigate();
 
 
+  const {token} = JSON.parse(localStorage.getItem("user")) || "";
+  const [carts,setCarts] = useState([]);
+
+
+  useEffect(()=>{
+
+    const getCartData  =  async()=>{
+
+      const data  = await  getcart(token);
+  
+      if(data)
+      {
+        setCarts(data.cartData);
+
+      }
+  
+    }
+
+
+    token && getCartData();
+
+  },[carts])
+
+
   const handleUser = ()=>{
 
-    const data  = localStorage.getItem("user");
+   
 
-    if(data)
+    if(token)
     {
       navigate("/profile");
     }
@@ -31,9 +55,9 @@ const Header = () => {
   return (
     <nav className='navbar'>
 
-      {/* logo */}
+      
       <div className='logoicon'>
-        <img src='./assets/logo.png' alt='logoimg' />
+        <img src='./assets/logo1.png' alt='logoimg' />
       </div>
 
         <div className='nav-bar1'>
@@ -50,10 +74,10 @@ const Header = () => {
 
         <div className='nav-bar2'>
             <NavLink to="/Cart" className="nav-ink">
-            <div className='nav-cart-count'>0</div>
+            <div className='nav-cart-count'>{carts.length}</div>
              <ShoppingCartIcon/>
             </NavLink>
-            <div onClick={()=> handleUser()}>
+            <div className='nav-profile-icon'onClick={()=> handleUser()}>
               <AccountCircleIcon/>
             </div>
         </div>
