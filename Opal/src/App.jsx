@@ -33,7 +33,7 @@ function App() {
       <Route path='/' element={<Suspense fallback={ <div>Loading...</div> } ><Home/></Suspense>} />
       <Route path='/menu' element={<Menu/>} />
       <Route path='/about' element={<About/>} />
-      <Route path='/cart' element={<Suspense fallback={ <div>Loading...</div> } ><Cart/></Suspense>} />
+      <Route path='/cart' element={<Suspense fallback={<div>Loading...</div>}> <Cart/> </Suspense>} />
       <Route path='/register' element={<Register/>} />
       <Route path='/login' element={ <Signin/>} />
       <Route path='/profile' element={<Profile/>}/>

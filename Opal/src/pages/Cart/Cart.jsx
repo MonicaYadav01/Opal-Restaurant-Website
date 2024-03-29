@@ -3,6 +3,7 @@ import { getcart, removefromcart } from '../../api/cartProducts';
 import DeleteIcon from '@mui/icons-material/Delete';
 import './Cart.css'
 import { useNavigate } from 'react-router-dom';
+import Counter from '../../components/Cart/Counter';
 
 const Cart = () => {
 
@@ -75,6 +76,7 @@ const CartItem = ({_id,name,img,price,qty,deletefromcart})=>{
        <div className='container-content'>
          <h2>{name}</h2>
          <h3>Rs.{price}</h3>
+         <Counter id={_id}/>
          <h4>{qty}</h4>
          <div onClick={deletefromcart}>
          <DeleteIcon/>
@@ -101,9 +103,6 @@ const OrderDetails = ({carts})=>{
 
     return(
       <div>
-        <div>
-           {/* {carts.map((item)=> (<p>{item.name}*{item</p> ))} */}
-        </div>
         <div className='orderdetails-container'>
           <div className='orderdetails-part1'>
             <p>SubTotal</p>

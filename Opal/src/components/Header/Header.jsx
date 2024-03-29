@@ -12,27 +12,27 @@ const Header = () => {
 
 
   const {token} = JSON.parse(localStorage.getItem("user")) || "";
-  const [carts,setCarts] = useState([]);
+  // const [carts,setCarts] = useState([]);
 
 
-  useEffect(()=>{
+  // useEffect(()=>{
 
-    const getCartData  =  async()=>{
+  //   const getCartData  =  async()=>{
 
-      const data  = await  getcart(token);
+  //     const data  = await  getcart(token);
   
-      if(data)
-      {
-        setCarts(data.cartData);
+  //     if(data)
+  //     {
+  //       setCarts(data.cartData);
 
-      }
+  //     }
   
-    }
+  //   }
 
 
-    token && getCartData();
+  //   token && getCartData();
 
-  },[carts])
+  // },[carts])
 
 
   const handleUser = ()=>{
@@ -74,7 +74,7 @@ const Header = () => {
 
         <div className='nav-bar2'>
             <NavLink to="/Cart" className="nav-ink">
-            <div className='nav-cart-count'>{carts.length}</div>
+            <div className='nav-cart-count'></div>
              <ShoppingCartIcon/>
             </NavLink>
             <div className='nav-profile-icon'onClick={()=> handleUser()}>

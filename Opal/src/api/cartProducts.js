@@ -64,3 +64,18 @@ export const getcart =async(token)=>{
  }
 
 
+
+ export const incrementDecrement = async(token,id,qty)=>{
+  const response = await axios.post(`${BASE_URL}cart/${id}`,{qty},{
+    headers:{
+        "Content-Type":"application/json",
+        "Authorization":`Bearer ${token}`,
+    },
+
+
+ })
+
+ return response.data;
+ }
+
+
