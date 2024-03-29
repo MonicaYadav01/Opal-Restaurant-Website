@@ -12,7 +12,7 @@ const Counter = ({id})=>{
 
 
 
-    const getData  = async(id)=>{
+    const getData  = async(id,product)=>{
 
         try {
 
@@ -20,7 +20,7 @@ const Counter = ({id})=>{
 
             if(data)
             {
-                console.log(data);
+                setProduct(data.singlecart.qty);
             }
             
         } catch (error) {
@@ -33,11 +33,58 @@ const Counter = ({id})=>{
 
     useEffect(()=>{
 
-        token && getData(id);
+        token && getData(id,product);
 
     },[])
 
 
+
+    const increment = async()=>{
+
+
+        try {
+
+            if(product<1) return ;
+
+            const data  = await incrementDecrement(token,id,product+1);
+
+            if(data)
+            {
+                setProduct(data.singlecart.qty);
+            }
+            
+
+            
+        } catch (error) {
+            
+            console.log(error);
+        }
+
+
+
+    }
+
+
+    const decrement = async()=>{
+
+
+        try {
+
+            if(product<=1) return ;
+
+        const data  = await incrementDecrement(token,id,product-1);
+
+        if(data)
+        {
+            setProduct(data.singlecart.qty);
+        }
+            
+        } catch (error) {
+            
+        }
+        
+
+    }
 
 
     const style = {
@@ -58,9 +105,9 @@ const Counter = ({id})=>{
 
     return(
         <div style={style}>
-            <button style={buttonstyle}>+</button>
+            <button style={buttonstyle} onClick={increment}>+</button>
             <div>{product}</div>
-            <button style={buttonstyle}>-</button>
+            <button style={buttonstyle} onClick={decrement}>-</button>
         </div>
     )
 
