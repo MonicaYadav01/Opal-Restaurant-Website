@@ -105,9 +105,10 @@ const Counter = ({id})=>{
 
     return(
         <div style={style}>
-            <button style={buttonstyle} onClick={increment}>+</button>
-            <div>{product}</div>
             <button style={buttonstyle} onClick={decrement}>-</button>
+            <div>{product}</div>
+            <button style={buttonstyle} onClick={increment}>+</button>
+
         </div>
     )
 
