@@ -139,7 +139,7 @@ const Item  = ({_id,name,img,price,qty,addtocart,carts})=>{
         <div className='product-content'> 
           <h2>{name}</h2>
           <p>Rs.{price}</p>
-          {isFound ? <button onClick={()=> navigate("/cart")}>Go to cart </button>: <button className='add-cart' onClick={addtocart}>Add to cart</button> }
+          {isFound ? <button className='go-to-cart' onClick={()=> navigate("/cart")}>Go to cart </button>: <button className='add-cart' onClick={addtocart}>Add to cart</button> }
         </div>
       </div>
     )

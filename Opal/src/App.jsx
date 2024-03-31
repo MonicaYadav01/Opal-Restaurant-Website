@@ -2,20 +2,16 @@ import './App.css'
 import {BrowserRouter,Routes,Route } from 'react-router-dom'
 import { Suspense,lazy } from 'react';
 
-import Header from './components/Header/Header';
-
+const Header = lazy (()=> import('./components/Header/Header'));
 const  Home  = lazy(()=> import("./pages/Home/Home"));
-
-
-import Menu from './pages/Menu/Menu';
-
+const Menu = lazy (()=> import('./pages/Menu/Menu'));
 const  Cart  =  lazy(()=> import("./pages/Cart/Cart"));
-
-import Register from './pages/Register/Register';
-import About from './pages/About/About';
-import Footer from './components/Footer/Footer';
-import Signin from './pages/Signin/Signin';
-import Profile from './pages/Profile/Profile';
+const Register = lazy(()=> import('./pages/Register/Register'));
+const About = lazy(()=>  import('./pages/About/About'));
+const Footer = lazy(()=> import('./components/Footer/Footer'));
+const Signin = lazy(()=> import('./pages/Signin/Signin'));
+const Profile = lazy(()=> import('./pages/Profile/Profile'));
+const Ordersuccesful = lazy(()=> import('./components/Cart/Ordersuccesful'))
 
 
  
@@ -31,12 +27,13 @@ function App() {
     <Routes>
       
       <Route path='/' element={<Suspense fallback={ <div>Loading...</div> } ><Home/></Suspense>} />
-      <Route path='/menu' element={<Menu/>} />
-      <Route path='/about' element={<About/>} />
+      <Route path='/menu' element={<Suspense fallback ={<div>Loading...</div>}><Menu/></Suspense>} />
+      <Route path='/about' element={<Suspense fallback={<div>Loading...</div>}><About/></Suspense>} />
       <Route path='/cart' element={<Suspense fallback={<div>Loading...</div>}> <Cart/> </Suspense>} />
-      <Route path='/register' element={<Register/>} />
-      <Route path='/login' element={ <Signin/>} />
-      <Route path='/profile' element={<Profile/>}/>
+      <Route path='/register' element={<Suspense fallback={<div>Loading...</div>}><Register/></Suspense>} />
+      <Route path='/login' element={<Suspense fallback={<div>Loading...</div>}><Signin/></Suspense>} />
+      <Route path='/profile' element={<Suspense fallback={<div>Loading...</div>}><Profile/></Suspense>}/>
+      <Route path='/ordersucessful' element={<Suspense fallback={<div>Loading...</div>}><Ordersuccesful/></Suspense>}/>
 
     </Routes>
     <Footer/>

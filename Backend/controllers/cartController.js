@@ -85,4 +85,24 @@ export const incrementDecrement = async(req,res)=>{
  }
 
 
+export const removecart = async(req,res)=>{
+    
+
+    try {
+
+        const deleteCartItems =  await CartModel.deleteMany({user:req.userid});
+
+        res.status(200).json({deleteCartItems});
+        
+    } catch (error) {
+
+        console.log(error.message);
+
+        res.status(400).json({message:"unAuthorized"});
+        
+    }
+
+    
+
+}
  

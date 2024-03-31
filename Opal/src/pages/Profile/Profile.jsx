@@ -21,7 +21,7 @@ function Profile() {
         "alignItems":"center",
         "backgroundColor":"black",
         "color":"white",
-        "padding":"1rem"
+        "padding":"2rem"
 
     }
 

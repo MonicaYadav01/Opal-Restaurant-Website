@@ -12,28 +12,7 @@ const Header = () => {
 
 
   const {token} = JSON.parse(localStorage.getItem("user")) || "";
-  // const [carts,setCarts] = useState([]);
-
-
-  // useEffect(()=>{
-
-  //   const getCartData  =  async()=>{
-
-  //     const data  = await  getcart(token);
   
-  //     if(data)
-  //     {
-  //       setCarts(data.cartData);
-
-  //     }
-  
-  //   }
-
-
-  //   token && getCartData();
-
-  // },[carts])
-
 
   const handleUser = ()=>{
 

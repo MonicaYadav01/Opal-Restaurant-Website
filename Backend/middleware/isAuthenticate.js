@@ -5,9 +5,7 @@ export const isAuthenticate = async(req,res,next)=>{
 
     try {
 
-          let token  = req.headers['authorization'];// this way i access it
-        // this above thing is sent by frontend! ok how? what is req.headers ?  it is attached to req/ use? bol
-        // when i implemnt if frontend then i tell you ok ok
+          let token  = req.headers['authorization'];
 
         if(!token)
         {

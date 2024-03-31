@@ -1,15 +1,18 @@
 .parent-container{
 
     display: flex;
+    justify-content:flex-start;
     gap: 2rem;
+    padding: 2rem;
+
 }
+
 .container{
 
     display: flex;
     gap: 2rem;  
 
 }
-
 
 
 .container-img img {
@@ -28,4 +31,23 @@
     display: flex;
     gap: 2rem;
     align-items: center;
+}
+
+.empty-cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 2rem;
+}
+.continue-btn{
+    background-color: black;
+    padding: 1rem 2rem;
+    color: white;
+    cursor: pointer;
+
+}
+.deleteicon{
+    cursor: pointer;
 }

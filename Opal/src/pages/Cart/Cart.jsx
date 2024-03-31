@@ -4,6 +4,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import './Cart.css'
 import { useNavigate } from 'react-router-dom';
 import Counter from '../../components/Cart/Counter';
+import OrderDetails from '../../components/Cart/Orderdetails';
 
 const Cart = () => {
 
@@ -14,6 +15,7 @@ const Cart = () => {
 
   const navigate  = useNavigate();
 
+ 
 
   useEffect(()=>{
 
@@ -46,16 +48,27 @@ const Cart = () => {
      }
   }
 
+ 
 
+  if(carts.length===0){
+    return (<div className='empty-cart'>
+      <div className='logoicon'>
+        <img src='./assets/emptycart.png' alt='logoimg' />
+      </div>
+      <p>Your cart is Empty!!</p>
+      <button className='continue-btn' onClick={()=> navigate("/menu")}>Continue</button>
+    </div>)
+  }
 
   return (
     <div className='parent-container'>
     <div>
       {carts.map((item)=>(<CartItem {...item} deletefromcart={()=> token ? deletefromcart(item._id) : navigate("/login") } />))}
     </div>
-    <div>
+     <div className='orderdetails-section'>
       <OrderDetails carts={carts}/>
     </div>
+    
     </div>
   );
 }
@@ -74,49 +87,15 @@ const CartItem = ({_id,name,img,price,qty,deletefromcart})=>{
          <img src={img} alt="demoImg" />
        </div>
        <div className='container-content'>
-         <h2>{name}</h2>
-         <h3>Rs.{price}</h3>
+         <h4>{name}</h4>
+         <h4>Rs.{price}</h4>
          <Counter id={_id}/>
          <h4>{qty}</h4>
-         <div onClick={deletefromcart}>
+         <div className='deleteicon' onClick={deletefromcart}>
          <DeleteIcon/>
          </div>
        </div>
     </div>
    )
-
-}
-
-
-
-const OrderDetails = ({carts})=>{
-
-
-
-  const getTotal = ()=>{
-
-    const total = carts.reduce((acc,curr)=> (curr.price*curr.qty) + acc ,0);
-    return total;
-
-  }
-
-
-    return(
-      <div>
-        <div className='orderdetails-container'>
-          <div className='orderdetails-part1'>
-            <p>SubTotal</p>
-            <p>RS.{getTotal()}</p>
-          </div>
-          <div className='orderdetails-part2'>
-            <p>Delivery</p>
-            <p>Free</p>
-          </div>
-          <button>Placed Order</button> 
-        </div>
-        
-      </div>
-    )
-
 
 }

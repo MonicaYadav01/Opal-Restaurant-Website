@@ -86,28 +86,30 @@ const Counter = ({id})=>{
 
     }
 
-
-    const style = {
-
+    const style={
         "display":"flex",
         "justifyContent":"center",
         "alignItems":"center",
-        "gap":"0.3rem",
-        "backgroundColor":"#afafaf",
-        "padding":"0.3rem"
+        "gap": "0.3rem",
+        "padding": "0.4rem",
+        "border": "1px solid"
     }
 
-    const buttonstyle= {
-
-        "backgroundColor":"#f5f5f5",
-        "padding":"0.3rem"
+    const buttonstyle={
+        "background-color": "#f5f5f5",
+        "padding": "0.3rem",
+        "cursor": "pointer"
     }
 
     return(
         <div style={style}>
-            <button style={buttonstyle} onClick={decrement}>-</button>
+            <div style={buttonstyle} onClick={decrement}>
+             <RemoveIcon/>
+            </div>
             <div>{product}</div>
-            <button style={buttonstyle} onClick={increment}>+</button>
+            <div style={buttonstyle} onClick={increment}>
+            <AddIcon/>
+            </div>
 
         </div>
     )
