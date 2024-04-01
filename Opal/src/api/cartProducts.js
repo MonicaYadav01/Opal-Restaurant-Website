@@ -73,8 +73,8 @@ export const getcart =async(token)=>{
  return response.data;
  }
 
- export const removecart= async(token)=>{
-  const response = await axios.post(`${BASE_URL}cart`,{
+ export const deleteusercart= async(token)=>{
+  const response = await axios.post(`${BASE_URL}cart/deleteusercart`,{
     headers:{
         "Content-Type":"application/json",
         "Authorization":`Bearer ${token}`,

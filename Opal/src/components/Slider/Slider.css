@@ -85,4 +85,8 @@ a{
 }
 
 
-
+@media screen and (max-width: 760px){
+    .slide-container {
+        height: 100vh;
+    }
+}

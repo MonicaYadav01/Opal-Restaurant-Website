@@ -1,5 +1,5 @@
 import  express from "express";
-import { getCart,addTocart,removefromcart, incrementDecrement, removecart } from "../controllers/cartController.js";
+import { getCart,addTocart,removefromcart, incrementDecrement, deleteusercart } from "../controllers/cartController.js";
 import { isAuthenticate } from "../middleware/isAuthenticate.js";
 
 export const cartRoute  = express.Router();
@@ -12,5 +12,5 @@ cartRoute.get("/removefromcart/:id",isAuthenticate,removefromcart);
 
 cartRoute.post("/:id",isAuthenticate,incrementDecrement);
 
-cartRoute.post("/removecart",isAuthenticate,removecart);
+cartRoute.post("/deleteusercart",isAuthenticate,deleteusercart);
 

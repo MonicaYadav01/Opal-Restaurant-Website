@@ -1,8 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { deleteusercart } from '../../api/cartProducts';
+
 
 const OrderDetails = ({carts})=>{
 
+  const {token} = JSON.parse(localStorage.getItem("user")) || "";
     const navigate  = useNavigate();
 
     const getTotal = ()=>{
@@ -25,6 +28,17 @@ const OrderDetails = ({carts})=>{
       "color":"#ffffff",
       "cursor":"pointer"
     }
+    const deletecart =async()=>{
+        
+      const data  = await deleteusercart(token);
+
+      if(data)
+      {
+         console.log(data);
+         navigate("/ordersucessful");
+      }
+        
+    }
   
   
       return(
@@ -43,7 +57,7 @@ const OrderDetails = ({carts})=>{
               <p>Total Amount</p> 
               <p>RS.   {getTotal()}</p>
             </div>
-            <button style={buttonstyle} onClick={()=> navigate("/ordersucessful")}>Place Order</button> 
+            <button style={buttonstyle} onClick={()=> deletecart()}>Place Order</button> 
           </div>
           
       )

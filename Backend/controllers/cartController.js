@@ -85,7 +85,7 @@ export const incrementDecrement = async(req,res)=>{
  }
 
 
-export const removecart = async(req,res)=>{
+export const deleteusercart = async(req,res)=>{
     
 
     try {
