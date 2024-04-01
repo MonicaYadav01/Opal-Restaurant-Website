@@ -82,20 +82,20 @@ const CartItem = ({_id,name,img,price,qty,deletefromcart})=>{
   
 
    return(
+    
     <div className='container'>
        <div className='container-img'>
          <img src={img} alt="demoImg" />
+         <h6>{name}</h6>
        </div>
-       <div className='container-content'>
-         <h4>{name}</h4>
-         <h4>Rs.{price}</h4>
+        <div className='container-content'>
+          <h4>Rs.{price}</h4>
          <Counter id={_id}/>
-         <h4>{qty}</h4>
          <div className='deleteicon' onClick={deletefromcart}>
          <DeleteIcon/>
          </div>
+         </div>
        </div>
-    </div>
    )
 
 }

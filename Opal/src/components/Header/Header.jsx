@@ -26,11 +26,27 @@ const Header = () => {
     {
       navigate("/login");
     }
-  }
 
-  const showSidebar = ()=>{
-  
   }
+  const Mobileheader=()=> {
+    return (
+      <div className='mobileheader'>
+              <NavLink to="/"  className="nav-link">
+               Home
+              </NavLink>
+              <NavLink to="/Menu" className="nav-link">
+               Menu
+              </NavLink>
+              <NavLink to="/About" className="nav-link">
+               About
+              </NavLink> 
+              <NavLink to='/cart' className='nav-link'>
+                Cart
+              </NavLink>
+          </div>
+    )
+  }
+ 
 
   return (
     <nav className='navbar'>
@@ -49,6 +65,8 @@ const Header = () => {
              About
             </NavLink> 
         </div>
+        <div className='menu-icon' onClick={()=> Mobileheader()}>
+              <MenuIcon/></div>
         
         <div className='nav-bar2'>
             <NavLink to="/Cart" className="nav-link">
@@ -57,31 +75,7 @@ const Header = () => {
             <div className='profile-icon' onClick={()=> handleUser()}>
               <AccountCircleIcon/>
             </div>
-            <div className='menu-icon' onClick={()=>showSidebar()}>
-              <MenuIcon/></div>
         </div>
-        <div>
-
-        </div>
-        <div className='sidebar'>
-            <NavLink to="/"  className="nav-link">
-             Home
-            </NavLink>
-            <NavLink to="/Menu" className="nav-link">
-             Menu
-            </NavLink>
-            <NavLink to="/About" className="nav-link">
-             About
-            </NavLink> 
-            <NavLink to="/Cart" className="nav-link">
-             <ShoppingCartIcon/>
-            </NavLink>
-            <div className='profile-icon' onClick={()=> handleUser()}>
-              <AccountCircleIcon/>
-            </div>
-        </div>
-      
-
     </nav>
   )
 }

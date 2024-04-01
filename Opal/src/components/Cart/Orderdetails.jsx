@@ -28,6 +28,7 @@ const OrderDetails = ({carts})=>{
       "color":"#ffffff",
       "cursor":"pointer"
     }
+    
     const deletecart =async()=>{
         
       const data  = await deleteusercart(token);

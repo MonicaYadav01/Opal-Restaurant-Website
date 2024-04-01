@@ -90,14 +90,14 @@ const Counter = ({id})=>{
         "display":"flex",
         "justifyContent":"center",
         "alignItems":"center",
-        "gap": "0.3rem",
-        "padding": "0.4rem",
+        "gap": "0.2rem",
+        "padding": "0rem",
         "border": "1px solid"
     }
 
     const buttonstyle={
         "background-color": "#f5f5f5",
-        "padding": "0.3rem",
+        "padding": "0.1rem",
         "cursor": "pointer"
     }
 

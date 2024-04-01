@@ -1,7 +1,7 @@
 .parent-container{
 
     display: flex;
-    justify-content:flex-start;
+    justify-content:space-around;
     gap: 2rem;
     padding: 2rem;
 
@@ -11,6 +11,7 @@
 
     display: flex;
     gap: 2rem;  
+    font-size: x-small;
 
 }
 
@@ -19,11 +20,16 @@
 
     width: 8rem;
     height: 8rem;
-
     background-position: center;
     background-size: cover;
     object-fit: cover;
 
+}
+.container-img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .container-content{
@@ -51,3 +57,41 @@
 .deleteicon{
     cursor: pointer;
 }
+
+@media screen and (max-width:1248px) {
+    .parent-container{
+        display: flex;
+        justify-content:flex-start;
+        gap: 0.7rem;
+        padding: 0.7rem;
+    } 
+    .orderdetails-section{
+        display: flex;
+        justify-content: flex-end;
+        font-size: medium;
+    }
+}
+@media screen and (max-width:1131px) {
+    .orderdetails-section{
+        display: flex;
+        justify-content: flex-end;
+
+    }
+    .parent-container{
+        display: flex;
+        justify-content:space-around;
+        align-items:center;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0.5rem;
+    }  
+}
+@media screen and (max-width:619px) {
+    .container-img{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    }
+    

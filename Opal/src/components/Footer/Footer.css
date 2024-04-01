@@ -36,4 +36,18 @@ footer .logoicon img {
     gap: 2rem;
 }
 
+@media screen and(max-width:1070px) {
+    .socials-icon{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    footer .logoicon img{
+        display: none;
+    }
+
+    
+}
 

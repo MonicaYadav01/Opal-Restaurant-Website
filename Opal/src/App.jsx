@@ -11,9 +11,7 @@ const About = lazy(()=>  import('./pages/About/About'));
 const Footer = lazy(()=> import('./components/Footer/Footer'));
 const Signin = lazy(()=> import('./pages/Signin/Signin'));
 const Profile = lazy(()=> import('./pages/Profile/Profile'));
-const Ordersuccesful = lazy(()=> import('./components/Cart/Ordersuccesful'))
-
-
+const Ordersuccesful = lazy(()=> import('./components/Cart/Ordersuccesful'));
  
 
 
@@ -34,7 +32,6 @@ function App() {
       <Route path='/login' element={<Suspense fallback={<div>Loading...</div>}><Signin/></Suspense>} />
       <Route path='/profile' element={<Suspense fallback={<div>Loading...</div>}><Profile/></Suspense>}/>
       <Route path='/ordersucessful' element={<Suspense fallback={<div>Loading...</div>}><Ordersuccesful/></Suspense>}/>
-
     </Routes>
     <Footer/>
     </BrowserRouter>
