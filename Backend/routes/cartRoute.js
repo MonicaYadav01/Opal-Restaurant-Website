@@ -12,5 +12,5 @@ cartRoute.get("/removefromcart/:id",isAuthenticate,removefromcart);
 
 cartRoute.post("/:id",isAuthenticate,incrementDecrement);
 
-cartRoute.post("/deleteusercart",isAuthenticate,deleteusercart);
+cartRoute.get("/deleteusercart",isAuthenticate,deleteusercart);
 
