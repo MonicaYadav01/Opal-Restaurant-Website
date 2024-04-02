@@ -3,7 +3,9 @@ import {NavLink, useNavigate} from 'react-router-dom';
 import './Header.css';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import MenuIcon from '@mui/icons-material/Menu';
+import HomeIcon from '@mui/icons-material/Home';
+import RestaurantMenuIcon from '@mui/icons-material/RestaurantMenu';
+
 
 const Header = () => {
   
@@ -28,24 +30,7 @@ const Header = () => {
     }
 
   }
-  const Mobileheader=()=> {
-    return (
-      <div className='mobileheader'>
-              <NavLink to="/"  className="nav-link">
-               Home
-              </NavLink>
-              <NavLink to="/Menu" className="nav-link">
-               Menu
-              </NavLink>
-              <NavLink to="/About" className="nav-link">
-               About
-              </NavLink> 
-              <NavLink to='/cart' className='nav-link'>
-                Cart
-              </NavLink>
-          </div>
-    )
-  }
+  
  
 
   return (
@@ -65,8 +50,13 @@ const Header = () => {
              About
             </NavLink> 
         </div>
-        <div className='menu-icon' onClick={()=> Mobileheader()}>
-              <MenuIcon/></div>
+        <div className='mobile-nav'>
+        <div className='HomeIcon' onClick={()=> navigate("/")}>
+             <HomeIcon/> </div>
+        <div className='RestaurantMenuIcon' onClick={()=> navigate("/menu")}>
+             <RestaurantMenuIcon/>
+        </div>
+        </div>
         
         <div className='nav-bar2'>
             <NavLink to="/Cart" className="nav-link">

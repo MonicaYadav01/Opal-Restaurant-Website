@@ -31,11 +31,12 @@ nav .logoicon img {
     display: flex;
     align-items: center;
     gap: 3rem;
+    justify-content: flex-end;
 }
 .profile-icon{
     cursor: pointer;
 }
-.menu-icon, .mobileheader{
+.mobile-nav{
     display: none;
 }
 
@@ -51,26 +52,30 @@ nav .logoicon img {
     .nav-bar1, .nav-bar2{
         padding: 1rem;
     }
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 @media screen and (max-width: 600px) {
     .nav-bar1{
         display: none;
     }
-    .menu-icon{
-        display: block;
-    }
-    .mobileheader{
+    .mobile-nav{
         display: block;
         display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        flex-direction: column;
-        z-index: 999;
-        background-color: rgba(0, 0, 0, 0.1);
-        
-        
+        align-items: center;
+        gap: 2rem;
     }
-    
-}
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem;
+    }
+    .nav-bar2{
+        gap: 2rem;
+    }
+   }
 

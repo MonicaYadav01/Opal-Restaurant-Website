@@ -16,7 +16,7 @@ function About() {
       </div>
       <div className='para-content'>
       <h3>Experience Authentic Korean Cuisine in the Heart of India-Also by ordering online through our website.</h3>
-      <p>Welcome to Opal House, where we bring the vibrant flavors of Korea to the bustling streets of India. Nestled in Noida, our restaurant offers a unique culinary journey that combines traditional Korean recipes with a touch of local Indian flair.</p>
+      <p>Welcome to Opal House, where we bring the vibrant flavors of Korea to the bustling streets of India. Nestled in Mumbai, our restaurant offers a unique culinary journey that combines traditional Korean recipes with a touch of local Indian flair.</p>
       </div>
       
     </div>

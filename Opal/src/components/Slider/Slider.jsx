@@ -14,10 +14,10 @@ function Sliders() {
 
 
     let images  = [
-         'https://www.remotelands.com/travelogues/app/uploads/2022/09/Korean-cuisine-header-2.jpg',
-         'https://veggieanh.com/wp-content/uploads/2023/07/Bulgogi-Kimbap-with-Tempeh-featured-image.jpg',    
-         'https://mykoreankitchen.com/wp-content/uploads/2022/01/5.-Homemade-Kimchi.jpg',
-         'https://peaktoplate.com/wp-content/uploads/2022/06/pronghorn-bibimbap-in-bowl-with-chopsticks.jpg'
+        'https://www.remotelands.com/travelogues/app/uploads/2022/09/Korean-cuisine-header-2.jpg', 
+        'https://veggieanh.com/wp-content/uploads/2023/07/Bulgogi-Kimbap-with-Tempeh-featured-image.jpg', 
+        'https://mykoreankitchen.com/wp-content/uploads/2022/01/5.-Homemade-Kimchi.jpg', 
+        'https://peaktoplate.com/wp-content/uploads/2022/06/pronghorn-bibimbap-in-bowl-with-chopsticks.jpg', 
      ];
 
      const NextArrow = ({ onClick }) => {

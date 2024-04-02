@@ -31,15 +31,15 @@ const Footer = () => {
       <div className='footer-social'>
         <h2>SOCIAL MEDIA</h2>
          <div className='socials-icon'> 
-         <span className='FacebookIcon'>
+         <div className='FacebookIcon'>
           <FacebookIcon/>
-         </span>
-         <span className='InstagramIcon'>
+         </div>
+         <div className='InstagramIcon'>
           <InstagramIcon/>
-         </span>
-         <span className='TwitterIcon'>
+         </div>
+         <div className='TwitterIcon'>
           <XIcon/>
-         </span>
+         </div>
          </div>
       </div>
       <div className='footer-feedback'>

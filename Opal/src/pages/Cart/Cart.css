@@ -28,8 +28,7 @@
 .container-img{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content:flex-start;
 }
 
 .container-content{
@@ -90,8 +89,31 @@
     .container-img{
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        justify-content: flex-start;
+    }
+    .parent-container{
+       display: flex;
+       justify-content: space-aroun;
     }
     }
+@media screen and (max-width:440px) {
+    .parent-container{
+        display: flex;
+        justify-content: space-around;
+        width: 500px;
+        padding: 1rem;
+    }
+    .container{
+
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;  
+        font-size: xx-small;
+    }
+    .container-img img {
+        width: 5rem;
+        height: 5rem;
+    }
+
+}
     

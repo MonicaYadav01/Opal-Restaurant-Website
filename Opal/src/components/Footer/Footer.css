@@ -33,21 +33,37 @@ footer .logoicon img {
 .socials-icon{
 
     display: flex;
+    flex-direction: row;
     gap: 2rem;
 }
 
-@media screen and(max-width:1070px) {
-    .socials-icon{
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-    }
-    footer .logoicon img{
+@media screen and (max-width: 1070px) {
+    
+    
+    footer .logoicon{
         display: none;
     }
-
-    
+    .footer{
+        display: flex;
+        justify-content: space-around;
+    }
 }
 
+@media screen and (max-width: 900px) {
+    footer .logoicon{
+        display: none;
+    }  
+}
+
+@media screen and (max-width: 600px) {
+    .footer{
+        display: flex;
+        justify-content: flex-start;
+        align-items:center;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 2rem;
+    }
+}
+
+ 

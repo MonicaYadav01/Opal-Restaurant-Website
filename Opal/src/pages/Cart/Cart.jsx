@@ -87,6 +87,7 @@ const CartItem = ({_id,name,img,price,qty,deletefromcart})=>{
        <div className='container-img'>
          <img src={img} alt="demoImg" />
          <h6>{name}</h6>
+         <br/>
        </div>
         <div className='container-content'>
           <h4>Rs.{price}</h4>
